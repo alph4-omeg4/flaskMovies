@@ -1,8 +1,11 @@
+
+
 from flask import Flask
 from flask_migrate import Migrate
 from flask_restful import Api
 from flask_sqlalchemy import SQLAlchemy
 from flask_swagger_ui import get_swaggerui_blueprint
+
 
 import config
 
@@ -27,3 +30,4 @@ app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
 from src import routes
 from src.database import models
 from src.resources import films, actors
+#

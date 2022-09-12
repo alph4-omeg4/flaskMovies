@@ -6,13 +6,15 @@ name = "pypi"
 [packages]
 marshmallow = "*"
 flask-restful = "*"
-mypy = "*"
 flask-swagger-ui = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 pyjwt = "*"
 marshmallow-sqlalchemy = "*"
 pytest = "*"
+redis = "*"
+gunicorn = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
