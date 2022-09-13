@@ -16,10 +16,10 @@ class Film(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String, nullable=False)
-    release_date = db.Column(db.Date, index=True, nullable=False)
-    uuid = db.Column(db.String(36), unique=True)
+    release_date = db.Column(db.Date, index=True, nullable=True)
+    uuid = db.Column(db.String(36), unique=True, nullable=True)
     description = db.Column(db.Text)
-    distributed_by = db.Column(db.String(128), nullable=False)
+    distributed_by = db.Column(db.String(128), nullable=True)
     length = db.Column(db.Float)
     rating = db.Column(db.Float)
     actors = db.relationship('Actor', secondary=movies_actors, lazy='select', backref=db.backref('films', lazy='select'))
